@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تواصل معنا – ShopZone</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="navbar-shopzone">
+  <div class="container h-100 d-flex align-items-center justify-content-between gap-2">
+    <a href="../index.html" class="logo">Shop<span>Zone</span></a>
+    <div class="d-flex align-items-center gap-3">
+      <a href="../index.html" style="color:rgba(255,255,255,0.7);font-size:0.9rem">الرئيسية</a>
+      <a href="products.html" style="color:rgba(255,255,255,0.7);font-size:0.9rem">المنتجات</a>
+      <a href="about.html" style="color:rgba(255,255,255,0.7);font-size:0.9rem">من نحن</a>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+      <button class="dark-toggle" onclick="toggleDark()"><i class="fas fa-moon"></i></button>
+      <a href="#" onclick="openCart()" style="color:white;position:relative;font-size:1.2rem">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-badge cart-count" style="display:none">0</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="about-hero">
+  <div class="container">
+    <h1>تواصل معنا 📬</h1>
+    <p>فريق دعم العملاء متاح 24/7 للإجابة على جميع استفساراتك</p>
+  </div>
+</div>
+
+<div class="container py-5">
+  <div class="row g-4">
+
+    <!-- CONTACT INFO -->
+    <div class="col-lg-4">
+      <h3 class="section-title">معلومات <span>التواصل</span></h3>
+
+      <div class="contact-info-box">
+        <div class="icon"><i class="fas fa-phone"></i></div>
+        <div>
+          <h6 style="font-weight:800;margin-bottom:3px">هاتف الدعم</h6>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin:0">19919 | +20 100 123 4567</p>
+          <p style="font-size:0.78rem;color:var(--primary);font-weight:600;margin:0">متاح 24/7</p>
+        </div>
+      </div>
+
+      <div class="contact-info-box">
+        <div class="icon"><i class="fas fa-envelope"></i></div>
+        <div>
+          <h6 style="font-weight:800;margin-bottom:3px">البريد الإلكتروني</h6>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin:0">support@shopzone.eg</p>
+          <p style="font-size:0.78rem;color:var(--primary);font-weight:600;margin:0">رد خلال ساعتين</p>
+        </div>
+      </div>
+
+      <div class="contact-info-box">
+        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div>
+          <h6 style="font-weight:800;margin-bottom:3px">العنوان</h6>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin:0">123 شارع التحرير، المعادي، القاهرة</p>
+        </div>
+      </div>
+
+      <div class="contact-info-box">
+        <div class="icon"><i class="fas fa-clock"></i></div>
+        <div>
+          <h6 style="font-weight:800;margin-bottom:3px">ساعات العمل</h6>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin:0">السبت – الخميس: 9ص – 11م</p>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin:0">الجمعة: 2م – 11م</p>
+        </div>
+      </div>
+
+      <!-- Social -->
+      <div style="background:var(--white);border-radius:var(--radius);padding:20px;box-shadow:var(--card-shadow);margin-top:5px">
+        <h6 style="font-weight:800;margin-bottom:15px">تابعنا على</h6>
+        <div class="d-flex gap-2 flex-wrap">
+          <a href="#" style="display:flex;align-items:center;gap:8px;background:#1877f2;color:white;padding:8px 16px;border-radius:20px;font-size:0.82rem;font-weight:600">
+            <i class="fab fa-facebook-f"></i> فيسبوك
+          </a>
+          <a href="#" style="display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:white;padding:8px 16px;border-radius:20px;font-size:0.82rem;font-weight:600">
+            <i class="fab fa-instagram"></i> انستجرام
+          </a>
+          <a href="#" style="display:flex;align-items:center;gap:8px;background:#25d366;color:white;padding:8px 16px;border-radius:20px;font-size:0.82rem;font-weight:600">
+            <i class="fab fa-whatsapp"></i> واتساب
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div class="col-lg-8">
+      <div class="checkout-form">
+        <h3 style="font-weight:800;margin-bottom:5px">أرسل لنا رسالة ✉️</h3>
+        <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:25px">سنرد عليك خلال ساعتين على الأكثر</p>
+
+        <!-- Success Message (hidden) -->
+        <div id="formSuccess" style="display:none;background:#d4edda;border:1px solid #c3e6cb;border-radius:var(--radius);padding:20px;text-align:center;margin-bottom:20px">
+          <div style="font-size:2.5rem;margin-bottom:10px">✅</div>
+          <h5 style="font-weight:800;color:#155724">تم إرسال رسالتك بنجاح!</h5>
+          <p style="color:#155724;font-size:0.9rem;margin:0">سنتواصل معك قريباً</p>
+        </div>
+
+        <div id="contactFormEl">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label>الاسم الكامل *</label>
+              <input type="text" class="form-control mt-1" id="contactName" placeholder="مثال: أحمد محمد">
+            </div>
+            <div class="col-md-6">
+              <label>البريد الإلكتروني *</label>
+              <input type="email" class="form-control mt-1" id="contactEmail" placeholder="example@mail.com">
+            </div>
+            <div class="col-md-6">
+              <label>رقم الهاتف</label>
+              <input type="tel" class="form-control mt-1" id="contactPhone" placeholder="01xxxxxxxxx">
+            </div>
+            <div class="col-md-6">
+              <label>موضوع الرسالة *</label>
+              <select class="form-select mt-1" id="contactSubject">
+                <option value="">اختر الموضوع</option>
+                <option>استفسار عن منتج</option>
+                <option>مشكلة في الطلب</option>
+                <option>الشحن والتوصيل</option>
+                <option>استرداد المبلغ</option>
+                <option>اقتراح أو شكوى</option>
+                <option>أخرى</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label>رقم الطلب (إن وجد)</label>
+              <input type="text" class="form-control mt-1" id="contactOrderNum" placeholder="مثال: #SZ-12345">
+            </div>
+            <div class="col-12">
+              <label>الرسالة *</label>
+              <textarea class="form-control mt-1" id="contactMessage" rows="5" placeholder="اكتب رسالتك هنا بالتفصيل..."></textarea>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="contactConsent" style="accent-color:var(--primary)">
+                <label class="form-check-label" for="contactConsent" style="font-size:0.85rem;cursor:pointer">
+                  أوافق على <a href="#" style="color:var(--primary)">سياسة الخصوصية</a> وأن يتم التواصل معي
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button onclick="sendContactForm()" style="background:var(--primary);color:white;border:none;padding:14px 40px;border-radius:var(--radius);font-family:var(--font-main);font-weight:800;font-size:1rem;cursor:pointer;transition:all 0.25s ease" onmouseover="this.style.background='var(--primary-dark)'" onmouseout="this.style.background='var(--primary)'">
+                <i class="fas fa-paper-plane me-2"></i>إرسال الرسالة
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div style="margin-top:25px">
+        <h4 style="font-weight:800;margin-bottom:20px">الأسئلة الشائعة ❓</h4>
+        <div class="accordion" id="faqAccordion">
+          <div style="background:var(--white);border-radius:var(--radius);margin-bottom:10px;box-shadow:var(--card-shadow);overflow:hidden">
+            <button onclick="toggleFaq(this)" style="width:100%;background:none;border:none;padding:15px 20px;text-align:right;font-family:var(--font-main);font-weight:700;font-size:0.92rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--text)">
+              كيف يمكنني تتبع طلبي؟
+              <i class="fas fa-chevron-down" style="color:var(--primary);transition:transform 0.3s"></i>
+            </button>
+            <div class="faq-body" style="display:none;padding:0 20px 15px;color:var(--text-muted);font-size:0.88rem;line-height:1.8">
+              بعد تأكيد طلبك، ستصلك رسالة نصية برقم التتبع. يمكنك متابعة حالة طلبك من خلال صفحة "طلباتي" في حسابك.
+            </div>
+          </div>
+          <div style="background:var(--white);border-radius:var(--radius);margin-bottom:10px;box-shadow:var(--card-shadow);overflow:hidden">
+            <button onclick="toggleFaq(this)" style="width:100%;background:none;border:none;padding:15px 20px;text-align:right;font-family:var(--font-main);font-weight:700;font-size:0.92rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--text)">
+              ما هي سياسة الإرجاع والاستبدال؟
+              <i class="fas fa-chevron-down" style="color:var(--primary);transition:transform 0.3s"></i>
+            </button>
+            <div class="faq-body" style="display:none;padding:0 20px 15px;color:var(--text-muted);font-size:0.88rem;line-height:1.8">
+              نقبل الإرجاع خلال 30 يوم من تاريخ الاستلام، شرط أن يكون المنتج في حالته الأصلية مع التغليف والفاتورة.
+            </div>
+          </div>
+          <div style="background:var(--white);border-radius:var(--radius);margin-bottom:10px;box-shadow:var(--card-shadow);overflow:hidden">
+            <button onclick="toggleFaq(this)" style="width:100%;background:none;border:none;padding:15px 20px;text-align:right;font-family:var(--font-main);font-weight:700;font-size:0.92rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--text)">
+              كم تستغرق مدة التوصيل؟
+              <i class="fas fa-chevron-down" style="color:var(--primary);transition:transform 0.3s"></i>
+            </button>
+            <div class="faq-body" style="display:none;padding:0 20px 15px;color:var(--text-muted);font-size:0.88rem;line-height:1.8">
+              التوصيل داخل القاهرة والجيزة خلال 24 ساعة. باقي المحافظات خلال 2-3 أيام عمل. والشحن مجاني على جميع الطلبات.
+            </div>
+          </div>
+          <div style="background:var(--white);border-radius:var(--radius);margin-bottom:10px;box-shadow:var(--card-shadow);overflow:hidden">
+            <button onclick="toggleFaq(this)" style="width:100%;background:none;border:none;padding:15px 20px;text-align:right;font-family:var(--font-main);font-weight:700;font-size:0.92rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--text)">
+              هل يمكنني تعديل أو إلغاء طلبي؟
+              <i class="fas fa-chevron-down" style="color:var(--primary);transition:transform 0.3s"></i>
+            </button>
+            <div class="faq-body" style="display:none;padding:0 20px 15px;color:var(--text-muted);font-size:0.88rem;line-height:1.8">
+              يمكنك تعديل أو إلغاء طلبك خلال ساعتين من تقديمه. بعد ذلك، يكون الطلب في مرحلة التجهيز ولا يمكن تعديله.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2025 ShopZone – جميع الحقوق محفوظة</p>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header"><h5><i class="fas fa-shopping-cart me-2"></i>سلة التسوق</h5><button class="cart-close" onclick="closeCart()">×</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span class="label">الإجمالي:</span><span class="amount" id="cartTotal">0 جنيه</span></div>
+    <button class="btn-checkout" onclick="location.href='checkout.html';closeCart()"><i class="fas fa-credit-card me-2"></i>إتمام الشراء</button>
+  </div>
+</div>
+
+<button id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="../js/main.js"></script>
+<script>
+  function sendContactForm() {
+    const name = document.getElementById('contactName').value.trim();
+    const email = document.getElementById('contactEmail').value.trim();
+    const subject = document.getElementById('contactSubject').value;
+    const message = document.getElementById('contactMessage').value.trim();
+    const consent = document.getElementById('contactConsent').checked;
+
+    if (!name || !email || !subject || !message) {
+      showToast('⚠️ من فضلك أكمل الحقول المطلوبة', 'error'); return;
+    }
+    if (!consent) {
+      showToast('⚠️ يجب الموافقة على سياسة الخصوصية', 'error'); return;
+    }
+
+    // Save to localStorage
+    const messages = JSON.parse(localStorage.getItem('shopzone_messages') || '[]');
+    messages.push({ name, email, subject, message, date: new Date().toLocaleDateString('ar-EG') });
+    localStorage.setItem('shopzone_messages', JSON.stringify(messages));
+
+    document.getElementById('contactFormEl').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+    showToast('✅ تم إرسال رسالتك بنجاح!', 'success');
+  }
+
+  function toggleFaq(btn) {
+    const body = btn.nextElementSibling;
+    const icon = btn.querySelector('i');
+    const isOpen = body.style.display !== 'none';
+    body.style.display = isOpen ? 'none' : 'block';
+    icon.style.transform = isOpen ? 'rotate(0)' : 'rotate(180deg)';
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المفضلة – ShopZone</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="navbar-shopzone">
+  <div class="container h-100 d-flex align-items-center justify-content-between gap-2">
+    <a href="../index.html" class="logo">Shop<span>Zone</span></a>
+    <div class="d-flex align-items-center gap-2">
+      <button class="dark-toggle" onclick="toggleDark()"><i class="fas fa-moon"></i></button>
+      <a href="#" onclick="openCart()" style="color:white;position:relative;font-size:1.2rem">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-badge cart-count" style="display:none">0</span>
+      </a>
+      <a href="login.html" id="authBtn"><button class="nav-btn">تسجيل دخول</button></a>
+    </div>
+  </div>
+</nav>
+
+<div class="container py-5">
+  <h2 class="section-title">المفضلة <span>❤️</span></h2>
+  <div class="row" id="wishlistGrid"></div>
+</div>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header"><h5><i class="fas fa-shopping-cart me-2"></i>سلة التسوق</h5><button class="cart-close" onclick="closeCart()">×</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span class="label">الإجمالي:</span><span class="amount" id="cartTotal">0 جنيه</span></div>
+    <button class="btn-checkout" onclick="location.href='checkout.html';closeCart()"><i class="fas fa-credit-card me-2"></i>إتمام الشراء</button>
+  </div>
+</div>
+<button id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="../js/main.js"></script>
+<script>
+  function renderWishlist() {
+    const grid = document.getElementById('wishlistGrid');
+    if (wishlist.length === 0) {
+      grid.innerHTML = `<div class="col-12"><div class="empty-state"><div class="empty-icon">💔</div><h4>قائمة المفضلة فارغة</h4><p>أضف المنتجات التي تعجبك للمفضلة</p><a href="products.html"><button style="background:var(--primary);color:white;border:none;padding:12px 30px;border-radius:var(--radius);font-family:var(--font-main);font-weight:700;cursor:pointer">تسوق الآن</button></a></div></div>`;
+      return;
+    }
+    const wishProds = products.filter(p => wishlist.includes(p.id));
+    grid.innerHTML = wishProds.map(renderProductCard).join('');
+  }
+  renderWishlist();
+</script>
+</body>
+</html>

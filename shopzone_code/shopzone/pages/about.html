@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>من نحن – ShopZone</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="navbar-shopzone">
+  <div class="container h-100 d-flex align-items-center justify-content-between gap-2">
+    <a href="../index.html" class="logo">Shop<span>Zone</span></a>
+    <div class="d-flex align-items-center gap-3">
+      <a href="../index.html" style="color:rgba(255,255,255,0.7);font-size:0.9rem">الرئيسية</a>
+      <a href="products.html" style="color:rgba(255,255,255,0.7);font-size:0.9rem">المنتجات</a>
+      <a href="contact.html" style="color:rgba(255,255,255,0.7);font-size:0.9rem">تواصل معنا</a>
+    </div>
+    <div class="d-flex align-items-center gap-2">
+      <button class="dark-toggle" onclick="toggleDark()"><i class="fas fa-moon"></i></button>
+      <a href="#" onclick="openCart()" style="color:white;position:relative;font-size:1.2rem">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-badge cart-count" style="display:none">0</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="about-hero">
+  <div class="container">
+    <h1>من نحن؟ 🛍️</h1>
+    <p>نحن ShopZone، متجرك الإلكتروني الأول في مصر. نسعى دائماً لتقديم أفضل تجربة تسوق بأقل الأسعار وأعلى جودة.</p>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="container py-5">
+  <div class="row g-3">
+    <div class="col-6 col-md-3"><div class="stat-box"><div class="num">+10K</div><div class="label">منتج متاح</div></div></div>
+    <div class="col-6 col-md-3"><div class="stat-box"><div class="num">+50K</div><div class="label">عميل سعيد</div></div></div>
+    <div class="col-6 col-md-3"><div class="stat-box"><div class="num">+5</div><div class="label">سنوات خبرة</div></div></div>
+    <div class="col-6 col-md-3"><div class="stat-box"><div class="num">27</div><div class="label">محافظة نخدمها</div></div></div>
+  </div>
+</div>
+
+<!-- STORY -->
+<div class="container pb-5">
+  <div class="row align-items-center g-5">
+    <div class="col-md-6">
+      <h2 class="section-title">قصتنا مع <span>التسوق</span></h2>
+      <p style="line-height:2;color:var(--text-muted);font-size:0.95rem">
+        بدأت رحلة ShopZone عام 2020 بفكرة بسيطة: توفير تجربة تسوق إلكتروني سهلة، موثوقة، وبأسعار تنافسية لجميع المصريين.
+      </p>
+      <p style="line-height:2;color:var(--text-muted);font-size:0.95rem;margin-top:15px">
+        اليوم، أصبحنا من أكبر المتاجر الإلكترونية في مصر، نخدم أكثر من 50,000 عميل في 27 محافظة، ونقدم آلاف المنتجات في مختلف الفئات مع ضمان الجودة والتوصيل السريع.
+      </p>
+      <div class="d-flex gap-3 mt-4 flex-wrap">
+        <div style="display:flex;align-items:center;gap:8px;background:var(--primary-light);padding:12px 18px;border-radius:var(--radius);color:var(--primary);font-weight:700;font-size:0.9rem">
+          <i class="fas fa-award"></i> أفضل متجر إلكتروني 2023
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;background:var(--primary-light);padding:12px 18px;border-radius:var(--radius);color:var(--primary);font-weight:700;font-size:0.9rem">
+          <i class="fas fa-star"></i> تقييم 4.8/5 من عملائنا
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div style="background:linear-gradient(135deg,var(--secondary),#0f3460);border-radius:var(--radius);padding:40px;color:white;text-align:center">
+        <div style="font-size:6rem;margin-bottom:20px">🚀</div>
+        <h4 style="font-weight:800">رؤيتنا</h4>
+        <p style="opacity:0.7;line-height:1.8">أن نكون المتجر الإلكتروني الأول والأكثر ثقة في منطقة الشرق الأوسط، نقدم تجربة تسوق لا مثيل لها.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- VALUES -->
+<div style="background:var(--white);padding:60px 0;">
+  <div class="container">
+    <h2 class="section-title">قيمنا <span>الأساسية</span></h2>
+    <div class="row g-3">
+      <div class="col-md-4">
+        <div style="background:var(--bg);border-radius:var(--radius);padding:25px;text-align:center;border-top:4px solid var(--primary)">
+          <div style="font-size:3rem;margin-bottom:15px">🎯</div>
+          <h6 style="font-weight:800;margin-bottom:10px">الجودة أولاً</h6>
+          <p style="font-size:0.85rem;color:var(--text-muted)">نضمن أعلى معايير الجودة في كل منتج نقدمه لعملائنا</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div style="background:var(--bg);border-radius:var(--radius);padding:25px;text-align:center;border-top:4px solid var(--primary)">
+          <div style="font-size:3rem;margin-bottom:15px">🤝</div>
+          <h6 style="font-weight:800;margin-bottom:10px">الثقة والشفافية</h6>
+          <p style="font-size:0.85rem;color:var(--text-muted)">نبني علاقات طويلة الأمد مع عملائنا مبنية على الصدق والثقة</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div style="background:var(--bg);border-radius:var(--radius);padding:25px;text-align:center;border-top:4px solid var(--primary)">
+          <div style="font-size:3rem;margin-bottom:15px">💡</div>
+          <h6 style="font-weight:800;margin-bottom:10px">الابتكار المستمر</h6>
+          <p style="font-size:0.85rem;color:var(--text-muted)">نطور خدماتنا باستمرار لنقدم أفضل تجربة تسوق إلكتروني</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TEAM -->
+<div class="container py-5">
+  <h2 class="section-title">فريق <span>العمل</span></h2>
+  <div class="row g-3">
+    <div class="col-6 col-md-3">
+      <div class="team-card">
+        <div class="avatar">👨‍💼</div>
+        <h6 style="font-weight:800">أحمد محمد</h6>
+        <p style="font-size:0.8rem;color:var(--primary);font-weight:600">المدير التنفيذي</p>
+        <p style="font-size:0.78rem;color:var(--text-muted)">10+ سنوات خبرة في التجارة الإلكترونية</p>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="team-card">
+        <div class="avatar">👩‍💻</div>
+        <h6 style="font-weight:800">سارة أحمد</h6>
+        <p style="font-size:0.8rem;color:var(--primary);font-weight:600">مدير تقني</p>
+        <p style="font-size:0.78rem;color:var(--text-muted)">متخصصة في تطوير الويب والتجارة الإلكترونية</p>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="team-card">
+        <div class="avatar">👨‍🎨</div>
+        <h6 style="font-weight:800">محمد علي</h6>
+        <p style="font-size:0.8rem;color:var(--primary);font-weight:600">مصمم UI/UX</p>
+        <p style="font-size:0.78rem;color:var(--text-muted)">خبير في تصميم تجارب المستخدم الرقمية</p>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="team-card">
+        <div class="avatar">👩‍📦</div>
+        <h6 style="font-weight:800">فاطمة حسن</h6>
+        <p style="font-size:0.8rem;color:var(--primary);font-weight:600">مدير العمليات</p>
+        <p style="font-size:0.78rem;color:var(--text-muted)">تشرف على سلسلة التوريد والتوصيل</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2025 ShopZone – جميع الحقوق محفوظة</p>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header"><h5><i class="fas fa-shopping-cart me-2"></i>سلة التسوق</h5><button class="cart-close" onclick="closeCart()">×</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span class="label">الإجمالي:</span><span class="amount" id="cartTotal">0 جنيه</span></div>
+    <button class="btn-checkout" onclick="location.href='checkout.html';closeCart()"><i class="fas fa-credit-card me-2"></i>إتمام الشراء</button>
+  </div>
+</div>
+
+<button id="scrollTop"><i class="fas fa-arrow-up"></i></button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
